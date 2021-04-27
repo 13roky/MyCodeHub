@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.id选择器</title>
+
+    <style>
+        /* id选择器: id必须保证全局唯一
+            使用方法: #id名{}
+            不遵循就近原则,固定的
+            id选择器>class选择器>标签选择器
+        */
+        #test1{
+            color: #8a2be2;
+        }
+
+        #test2{
+            color: #ff7f50;
+        }
+
+        #test3{
+            color: #a52a2a;
+        }
+
+        h1{
+            color: #ff00c5;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="test1">标题1</h1>
+<h1 id="test2">标题1</h1>
+<h1 id="test3">标题1</h1>
+<h1>标题1</h1>
+<h1>标题1</h1>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>10.学习表单</title>
+</head>
+
+<body>
+
+<div>
+    <h1>注册</h1>
+</div>
+
+<!--
+表单form
+action : 表单提交的位置
+method : post, get 提交方式
+get方式提交: 我们可以在url中看到我们提交的信息, 不安全, 但是高效
+post方式提交: 比较安全, 传输大文件.
+-->
+<form action="6.表格.html" method="get">
+    <!--
+    文本输入框: imput type="text"
+    value="13roky"      默认初始值
+    maxlength="8"       最长能写几个字符
+    size="30"           文本框长度为30个字符长度
+    readonly            只读标签
+    hidden              隐藏
+    placeholder         提示信息 使用时就会消失
+    required            必填选项
+    -->
+    <p>名字:
+            <input maxlength="8" name="username" size="30" type="text" value="13roky" required>
+    </p>
+    <p>密码:
+            <input name="password" type="password" hidden>
+    </p>
+    <p>登录令牌:
+        <input name="password" type="password" placeholder="你的登录令牌" required>
+    </p>
+
+    <!-- 单选框标签
+         disabled 禁用 不可选
+    -->
+    <p>性别:
+            <input name="gender" type="radio" value="boy" disabled>男
+            <input name="gender" type="radio" value="girl">女
+    </p>
+
+    <!-- 多选框标签 -->
+
+    <p>爱好:
+            <input type="checkbox" name="hobby" id="睡觉">睡觉
+            <input type="checkbox" name="hobby" id="写代码">写代码
+            <input type="checkbox" name="hobby" id="打游戏">打游戏
+    </p>
+
+    <!-- 按钮 -->
+
+    <p>按钮:
+        <input type="button" value="点击变长">
+    </p>
+
+    <!-- 下拉框 -->
+
+    <p>下拉框:
+        <select name="列表名称">
+            <option value="选项的值">中国</option>
+            <option value="选项的值" selected>美国</option>
+            <option value="选项的值">印度</option>
+            <option value="选项的值">英国</option>
+        </select>
+    </p>
+
+    <p>文本域:
+        <textarea name="textarea" cols="50" rows="10"></textarea>
+    </p>
+    <!-- 文件域 -->
+    <p>
+        <input type="file" name="files" id="">
+        <input type="button" value="上传" name="upload">
+    </p>
+    <!--邮箱验证-->
+    <p>邮箱:
+        <input type="email" name="email" required>
+    </p>
+    <!--URL-->
+    <p>URL:
+        <input type="url" name="url" required>
+    </p>
+
+    <!--数字-->
+    <p>数字:
+        <input type="number" name="number" max="2021" min="1900" step="10">
+    </p>
+
+    <!--滑块-->
+    <p>滑块:
+        <input type="range" name="voice" min="0" max="100" step="5">
+    </p>
+
+    <!--搜索-->
+    <p>
+        搜索: <input type="search" name="search">
+    </p>
+
+    <!--增强鼠标可用性-->
+    <p>
+        <label for="mark">你点我试试</label>
+        <input type="text" value="default" id="mark">
+    </p>
+
+    <!--正则表达式自定义邮箱-->
+    <p>自定义邮箱
+        <input type="text" name="diymail" pattern="/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+/^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/或\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+    </p>
+
+    <p>
+        <input type="submit">
+        <input type="reset">
+    </p>
+
+</form>
+</body>
+
+</html>

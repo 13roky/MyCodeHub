@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.层次选择器</title>
+
+    <style>
+        /*后代选择器*/
+        /*选择body标签内的所有标签*/
+        body p{
+            background: antiquewhite;
+        }
+
+        /*子选择器*/
+        /*之选的body中下一级的p标签*/
+        body>p{
+            background: coral;
+        }
+
+        /*相邻兄弟选择器*/
+        /*选择下一个相邻的标签*/
+        .active + p{
+            background: aquamarine;
+        }
+
+        /*通用兄弟选择器*/
+        /*选择当前选中元素向下的所有兄弟元素*/
+        .active ~ p{
+            background: #c4d5ff;
+        }
+    </style>
+</head>
+<body>
+
+<p>p1</p>
+<p>p2</p>
+<p class="active">p3</p>
+<p>p3</p>
+<ul>
+    <li>
+        <p>p4</p>
+    </li>
+    <li>
+        <p>p5</p>
+    </li>
+    <li>
+        <p>p6</p>
+    </li>
+</ul>
+</body>
+</html>
