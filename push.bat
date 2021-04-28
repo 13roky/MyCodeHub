@@ -1,5 +1,4 @@
-@echo off
- 
+
 set /p comments=please input commit comments:
  
 git status
