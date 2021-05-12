@@ -14,6 +14,16 @@ import java.util.Arrays;
  * @date 2021-05-12 22:15
  */
 public class CompareTest {
+    /*
+    Comparable 接口的使用举例:
+    1. 像 String, 包装类等实现了 Comparable 接口, 重写了 compareTo(obj) 方法, 给出了比较两个对象
+    2. 像 String, 包装类重写了compareTo()方法以后,进行了从小到大的排列
+    3. 重写 compareTo(obj) 的规则:
+        如果当前对象 this 等于形参对象 obj, 则返回为零
+        如果当前对象 this 小于形参对象 obj, 则返回负整数
+        如果当前对象 this 大于形参对象 obj, 则返回正整数
+
+     */
     @Test
     public void test01(){
         String[] arr = new String[]{"aa","cc","kk","mm","gg","jj","dd"};
