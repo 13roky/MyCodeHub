@@ -1,10 +1,12 @@
 package com.broky.commonClass;
 
 /**
+ * 商品类
+ *
  * @author 13roky
  * @date 2021-05-12 22:42
  */
-public class Goods {
+public class Goods implements Comparable {
     private String name;
     private double price;
 
@@ -35,5 +37,27 @@ public class Goods {
     @Override
     public String toString() {
         return "Goods{" + "name='" + name + '\'' + ", price=" + price + '}';
+    }
+
+    // 指明商品比较大小的方式：按照价格从低到高排序，再按照产品名称从第到高排序
+    @Override
+    public int compareTo(Object o) {
+        if (o instanceof Goods) {
+            // 方式一
+            Goods goods = (Goods) o;
+            if (this.price > goods.price) {
+                return 1;
+            } else if (this.price < goods.price) {
+                return -1;
+            } else {
+                // 字符串类型的本身就有 compareTo 方法
+                return this.name.compareTo(goods.name);
+                // return -this.name.compareTo(goods.name); 加了负号变成了从高到低排
+            }
+            // 方式二
+            //return Double.compare(this.price,goods.price);
+
+        }
+        throw new RuntimeException("传入的数据类型不一致");
     }
 }
