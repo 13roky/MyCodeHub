@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Collection/Collection.iml" filepath="$PROJECT_DIR$/Collection/Collection.iml" />
       <module fileurl="file://$PROJECT_DIR$/CommonClass/CommonClass.iml" filepath="$PROJECT_DIR$/CommonClass/CommonClass.iml" />
       <module fileurl="file://$PROJECT_DIR$/EnumClass/EnumClass.iml" filepath="$PROJECT_DIR$/EnumClass/EnumClass.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaLearn.iml" filepath="$PROJECT_DIR$/JavaLearn.iml" />
