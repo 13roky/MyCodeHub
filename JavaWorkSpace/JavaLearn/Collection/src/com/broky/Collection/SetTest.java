@@ -82,8 +82,8 @@ public class SetTest {
                     User u2 = (User) o2;
                     return Integer.compare(u1.getAge(), u2.getAge());
                 } else {
-                    throw new RuntimeException("输入的数据类型不匹配");
                 }
+                    throw new RuntimeException("输入的数据类型不匹配");
             }
 
             ;
